@@ -3,9 +3,12 @@ name: Android CI
 on:
   push:
     branches: [ "debug-scroll" ]
+    tags:
+      - "latest_"
   pull_request:
     branches: [ "debug-scroll" ]
-
+    tags:
+      - "latest_"
 jobs:
   build:
 
