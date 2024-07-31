@@ -4,13 +4,13 @@ name: Android CI
 
 on:
   push:
-    branches: [ "zay448345045-patch-1" ]
-    tags:
-      - "latest_"
+    branches: [ "debug-scroll" ]
+#    tags:
+#      - "latest_"
   pull_request:
-    branches: [ "zay448345045-patch-1" ]
-    tags:
-      - "latest_"
+    branches: [ "debug-scroll" ]
+ #   tags:
+#      - "latest_"
 jobs:
   build:
 
