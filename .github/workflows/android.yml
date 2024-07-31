@@ -3,11 +3,11 @@ name: Android CI
 
 on:
   push:
-    branches: [ "debug-scroll" ]
+    branches: [ "master" ]
     tags:
       - "latest_"
   pull_request:
-    branches: [ "debug-scroll" ]
+    branches: [ "master" ]
     tags:
       - "latest_"
 jobs:
