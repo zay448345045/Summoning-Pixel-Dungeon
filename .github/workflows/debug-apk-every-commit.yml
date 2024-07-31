@@ -29,14 +29,21 @@ jobs:
           echo "1.2.5a-$(git rev-parse --short "$GITHUB_SHA")" > version
 
       # 2
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
       - name: Generate Release APK
         run: ./gradlew android:assembleDebug
       - name: Generate Release JAR
         run: ./gradlew desktop:debug
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
       - uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path:: '**/*.apk'
+          path:: |
+            '**/*.apk'
+            '**/*.jar
+            
       # 3
 #      - name: Sign APK
 #        uses: filippoLeporati93/android-release-signer@v1.0.0
