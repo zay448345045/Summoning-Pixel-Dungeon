@@ -405,11 +405,11 @@ public class GameScene extends PixelScene {
 					Dungeon.quickslot.setSlot(slot, debug);
 				}
 			}
-		} else if(debug != null) {
+		} /*else if(debug != null) {
 			// attempt to remove scroll of debug automatically.
 			debug.detachAll(Dungeon.hero.belongings.backpack);
 			Dungeon.quickslot.clearItem(debug);
-		}
+		}*/
 
 		Dungeon.hero.next();
 
